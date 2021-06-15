@@ -1,0 +1,351 @@
+/* https://codepen.io/silkine/pen/jldif */
+@font-face {
+    font-family: 'Cloister Black';
+    src: url('./fonts/CloisterBlack.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Chomsky';
+    src: url('./fonts/Chomsky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Eagle Lake';
+    src: url('./fonts/eaglelake-regular-webfont.woff2') format('woff2'),
+         url('./fonts/eaglelake-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Quintessential Regular';
+    src: url('fonts/quintessential-regular-webfont.woff2') format('woff2'),
+         url('fonts/quintessential-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UF Cook';
+    src: url('fonts/unifrakturcook-webfont.woff2') format('woff2'),
+         url('fonts/unifrakturcook-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'unifrakturcooklight';
+    src: url('fonts/unifrakturcook-light-webfont.woff2') format('woff2'),
+         url('fonts/unifrakturcook-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UF Maguntia';
+    src: url('fonts/unifrakturmaguntia-book-webfont.woff2') format('woff2'),
+         url('fonts/unifrakturmaguntia-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+newspaper_body{
+    font-family: 'Droid Serif', serif;
+    font-size: 14px;
+    color: #2f2f2f;
+    border: 1px solid black;
+    background-color: #f9f7f1;
+    width: 1500px;
+}
+header{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 80px;
+    text-transform: uppercase;
+    display: inline-block;
+    height: 100%;
+	margin-top: 15px;
+    margin-bottom: 10px;
+	margin-left: 150px;
+	text-align: center;
+}
+/* in header, display block makes the title in the image work.  inline block made it two lines */
+p{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.column1 img	{
+	float: right;
+	padding-left: 2em;
+	padding-bottom: 2em;
+}
+.head{
+    text-align: center;
+    position: relative;
+}
+.headerobjectswrapper{
+	height: 110px;
+	overflow: hidden;
+}
+.subhead{
+    text-transform: uppercase;
+    border-bottom: 2px solid #2f2f2f;
+    border-top: 2px solid #2f2f2f;
+    padding: 12px 0 12px 0;
+	margin-top: 30px;
+}
+.weatherforcastbox{
+    position: absolute;
+	font-size: 70%;
+    width: 12%;
+    left: 0;
+	top: 0;
+    border: 2px double #2f2f2f;
+    padding: 10px 15px 10px 15px;
+    line-height: 20px;
+    display: inline-block;
+    	clear: right;
+	
+}
+.content{
+    font-size: 0;
+    line-height: 0;
+    word-spacing: -.31em;
+    display: inline-block;
+    margin: 30px 2% 0 2%;
+}
+.columns{
+}
+
+.column1{
+    font-size: 14px;
+    line-height: 20px;
+    width: 75.5%;
+    display: inline-block;
+    padding: 0 3% 0 1%;
+    vertical-align: top;
+    margin-bottom: 50px;
+    transition: all .7s;
+}
+
+.column2{
+    font-size: 14px;
+    line-height: 20px;
+    width: 21.5%;
+    display: inline-block;
+    padding: 0 1% 0 3%;
+    vertical-align: top;
+    margin-bottom: 50px;
+    transition: all .7s;
+}
+
+.column1 + .column2 { 
+  border-left: 1px solid #2f2f2f;
+}
+.column1 .headline{
+    text-align: center;
+    line-height: normal;
+    font-family: 'Playfair Display', serif;
+    display: block;
+    margin: 0 auto;
+
+
+}
+.column2 .headline.hl1{
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 10px 0 10px 0;
+	display: inline-block;
+	line-height: normal;
+}
+/* h11 = Story Two Headline */
+
+.column1 .headline.hl2{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+
+.column1 .headline.hl2:before{
+    border-top: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
+.column .headline.hl2:after{
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 13px;
+    display: block;
+    margin: 0 auto;
+}
+
+.column .headline.hl3{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 36px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+/* h14 = Author for story 2 */
+
+.column2 .headline.hl4{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.column2 .headline.hl4:before{
+    border-top: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
+.column2 .headline.hl4:after{
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 10px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.column1 .headline.hl5{
+    font-weight: 400;
+    font-size: 42px;
+    text-transform: uppercase;
+    font-style: italic;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.column1 .headline.hl6{
+    font-weight: 400;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.column1 .headline.hl6:before{
+    border-top: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
+.column1 .headline.hl6:after{
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 10px;
+    display: block;
+    margin: 0 auto;
+
+}
+.column1 .headline.hl7{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 0 10px 0;
+}
+.column1 .headline.hl8{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.column1 .headline.hl9{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.column1 .headline.hl10{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.column .citation{
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    line-height: 44px;
+    /*font-style: italic;*/
+    text-align: center;
+    font-weight: 400;
+    display: block;
+    margin: 40px 0 40px 0;
+    font-feature-settings: "liga", "dlig";
+
+}
+.column .citation:before{
+    border-top: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 16px;
+    display: block;
+    margin: 0 auto;
+}
+.column .citation:after{
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 16px;
+    display: block;
+    margin: 0 auto;
+}
+
+.column .figcaption{
+	font-style: italic;
+	font-size: 12px;
+}
+.media {
+    -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
+    filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
+    mix-blend-mode: multiply;
+    width: 100%;
+}
+/*________________________________________________________________________________________________________________________________*/
+/*MEDIAQUERIES
+@media only all and (max-width: 1300px) {
+    .weatherforcastbox{
+        display: none;
+    }
+
+}
+@media only all and (max-width: 1200px) {
+    .column{
+        width: 31%;
+    }
+
+}
+    @media only all and (max-width: 900px) {
+    .column{
+        width: 47%;
+    }
+
+}
+@media only all and (max-width: 600px) {
+    .column{
+        width: 100%;
+    }
+	.column + .column {
+				border-left: none;
+      	border-bottom: 1px solid #2f2f2f;
+	}
+    header{
+        max-width: 320px;
+        font-size: 60px;
+        line-height: 54px;
+        overflow: hidden;
+    }
+
+}
+*/

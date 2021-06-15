@@ -1,0 +1,684 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App has a valid snapshot 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="template_select"
+  >
+    <aside>
+      <div
+        className="templateSelectBox"
+      >
+        <label>
+          Template
+        </label>
+        <select
+          name="template"
+          onChange={[Function]}
+        >
+          if (options)
+          <option>
+            Newspaper
+          </option>
+          <option>
+            Telegram
+          </option>
+          <option>
+            Magazine
+          </option>
+          <option>
+            Company Publication
+          </option>
+        </select>
+        <span
+          className="fontPreview"
+          style={
+            Object {
+              "fontFamily": "white",
+            }
+          }
+        >
+          Preview
+        </span>
+      </div>
+    </aside>
+  </div>
+  <div>
+    <form
+      className="input"
+    >
+      <h1>
+        Newspaper Front Page Generator
+      </h1>
+      <h2>
+        Headings
+      </h2>
+      <div
+        className="headingsInputs"
+      >
+        <div>
+          <label>
+            *Newspaper Name
+          </label>
+          <input
+            disabled=""
+            id="newspaperName"
+            name="newspaperName"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+        <div>
+          <label>
+            City
+          </label>
+          <input
+            disabled=""
+            id="city"
+            name="city"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+        <div>
+          <label>
+            State
+          </label>
+          <input
+            disabled=""
+            id="state"
+            name="state"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+        <div>
+          <label>
+            *Main Headline
+          </label>
+          <input
+            disabled=""
+            id="mainHeadline"
+            name="mainHeadline"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+        <div>
+          <label>
+            Main SubHeading
+          </label>
+          <input
+            disabled=""
+            id="mainSubHeading"
+            name="mainSubHeading"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+        <div>
+          <label>
+            *Headline Two
+          </label>
+          <input
+            disabled=""
+            id="headlineTwo"
+            name="headlineTwo"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+        <div>
+          <label>
+            Author
+          </label>
+          <input
+            disabled=""
+            id="author"
+            name="author"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+        <div>
+          <label>
+            Month
+          </label>
+          <input
+            disabled=""
+            id="month"
+            name="month"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+        <div>
+          <label>
+            Day
+          </label>
+          <input
+            disabled=""
+            id="day"
+            name="day"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+        <div>
+          <label>
+            Year
+          </label>
+          <input
+            disabled=""
+            id="year"
+            name="year"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+      </div>
+       
+      <h2>
+        Stories
+      </h2>
+      <div
+        className="storyInputs"
+      >
+        <div>
+          <input
+            checked={false}
+            id="mainStoryAuto"
+            name="mainStoryAuto"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label>
+            
+          </label>
+        </div>
+        <div>
+          <label>
+            Main Story
+          </label>
+          <textarea
+            cols="55"
+            id="mainStory"
+            name="mainStory"
+            onChange={[Function]}
+            rows="8"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+        <div>
+          <input
+            id="storyTwoAuto"
+            name="storyTwoAuto"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label>
+            
+          </label>
+        </div>
+        <div>
+          <label>
+            Story Two
+          </label>
+          <textarea
+            cols="55"
+            id="storyTwo"
+            name="storyTwo"
+            onChange={[Function]}
+            rows="8"
+            value=""
+          />
+          <span
+            className="errorSpan"
+          >
+            
+          </span>
+          <br />
+        </div>
+      </div>
+       
+      <div
+        className="checkboxes"
+      >
+        <div>
+          <label>
+            Auto-Fill All (Dbl-Click to Clear)
+          </label>
+          <input
+            checked={false}
+            defaultChecked={false}
+            id="allAuto"
+            name="allAuto"
+            onChange={[Function]}
+            type="checkbox"
+          />
+        </div>
+        <div>
+          <label>
+            Auto-Fill the Rest
+          </label>
+          <input
+            checked={false}
+            defaultChecked={false}
+            id="elseAuto"
+            name="elseAuto"
+            onChange={[Function]}
+            type="checkbox"
+          />
+        </div>
+      </div>
+      <h2>
+        Style
+      </h2>
+      <div
+        className="styleInputs"
+      >
+        <div
+          className="styleSelectBox"
+        >
+          <label>
+            Header Font
+          </label>
+          <select
+            name="fontHeader"
+            onChange={[Function]}
+          >
+            if (options)
+            <option>
+              Eagle Lake
+            </option>
+            <option>
+              Quintessential Regular
+            </option>
+            <option>
+              UF Cook
+            </option>
+            <option>
+              UF Maguntia
+            </option>
+            <option>
+              Chomsky
+            </option>
+            <option>
+              Cloister Black
+            </option>
+          </select>
+          <span
+            className="fontPreview"
+            style={
+              Object {
+                "fontFamily": "",
+              }
+            }
+          >
+            Preview
+          </span>
+        </div>
+        <div
+          className="styleSelectBox"
+        >
+          <label>
+            Headline Font
+          </label>
+          <select
+            name="fontHeadline"
+            onChange={[Function]}
+          >
+            if (options)
+            <option>
+              Eagle Lake
+            </option>
+            <option>
+              Quintessential Regular
+            </option>
+            <option>
+              UF Cook
+            </option>
+            <option>
+              UF Maguntia
+            </option>
+            <option>
+              Chomsky
+            </option>
+            <option>
+              Cloister Black
+            </option>
+          </select>
+          <span
+            className="fontPreview"
+            style={
+              Object {
+                "fontFamily": "",
+              }
+            }
+          >
+            Preview
+          </span>
+        </div>
+        <div
+          className="styleSelectBox"
+        >
+          <label>
+            Body Font
+          </label>
+          <select
+            name="fontBody"
+            onChange={[Function]}
+          >
+            if (options)
+            <option>
+              Courier
+            </option>
+            <option>
+              Helvetica
+            </option>
+            <option>
+              Times
+            </option>
+            <option>
+              Arial
+            </option>
+          </select>
+          <span
+            className="fontPreview"
+            style={
+              Object {
+                "fontFamily": "",
+              }
+            }
+          >
+            Preview
+          </span>
+        </div>
+      </div>
+      <div
+        className="styleInputsRowTwo"
+      />
+      <h2>
+        Image
+      </h2>
+      <div
+        className="imageInputs"
+      >
+        <div
+          className="imageLeft"
+        >
+          <input
+            className="imgButton"
+            onChange={[Function]}
+            type="file"
+          />
+          <button
+            className="clearImage"
+            onClick={[Function]}
+            type="button"
+            value="Clear"
+          >
+            Clear
+          </button>
+          <div
+            className="imagePreview"
+          >
+            <p
+              className="centered"
+            >
+              Image Preview
+            </p>
+          </div>
+        </div>
+        <div
+          className="imageRight"
+        >
+          <div>
+            <label>
+              Toggle Orientation
+            </label>
+            <input
+              id="isVertical"
+              name="isVertical"
+              onChange={[Function]}
+              type="checkbox"
+            />
+          </div>
+          <div
+            className="orientation"
+          >
+            <span>
+              Orientation: Horizontal
+            </span>
+          </div>
+          <div>
+            <label>
+              Grayscale
+            </label>
+            <input
+              id="isGrayscale"
+              name="isGrayscale"
+              onChange={[Function]}
+              type="checkbox"
+            />
+          </div>
+          <div>
+            <label>
+              Image Caption
+            </label>
+            <input
+              disabled=""
+              id="imageCaption"
+              name="imageCaption"
+              onChange={[Function]}
+              type="text"
+            />
+            <span
+              className="errorSpan"
+            />
+            <br />
+          </div>
+        </div>
+      </div>
+      <h3>
+        Color
+      </h3>
+      <div
+        className="colorInputs"
+      >
+        <div
+          className="colorSelectBox"
+        >
+          <label>
+            Page Color
+          </label>
+          <select
+            name="pageColor"
+            onChange={[Function]}
+          >
+            if (options)
+            <option>
+              White
+            </option>
+            <option>
+              Grey
+            </option>
+            <option>
+              Lightgrey
+            </option>
+            <option>
+              Whitesmoke
+            </option>
+            <option>
+              #FEF8C6
+            </option>
+          </select>
+          <div
+            className="colorPreview"
+            style={
+              Object {
+                "backgroundColor": "white",
+              }
+            }
+          />
+        </div>
+      </div>
+      <h3>
+        Front Page Image
+      </h3>
+      <p
+        className="centered"
+      >
+        No Image Yet
+      </p>
+      <div
+        className="errorMessage"
+      >
+        
+      </div>
+      <div
+        className="buttons"
+      >
+        <label>
+           
+        </label>
+        <button
+          className="generateButton"
+          onClick={[Function]}
+          type="button"
+          value="Generate"
+        >
+          Generate
+        </button>
+        <label>
+           
+        </label>
+        <button
+          className="spinButton"
+          type="button"
+          value="Spin"
+        >
+          Spin
+        </button>
+        <label>
+           
+        </label>
+        <button
+          className="imageButton"
+          onClick={[Function]}
+          type="button"
+          value="Image"
+        >
+          Image
+        </button>
+        <button
+          className="portalButton"
+          onClick={[Function]}
+          type="button"
+          value="Portal"
+        >
+          Portal
+        </button>
+        <button
+          className="downloadButton"
+          onClick={[Function]}
+          type="button"
+          value="Download"
+        >
+          Download
+        </button>
+      </div>
+    </form>
+    <br />
+    <h2
+      className="align"
+    >
+      Front Page:
+    </h2>
+    <p
+      className="centered"
+    >
+      No Front Page Yet
+    </p>
+    <br />
+  </div>
+</div>
+`;

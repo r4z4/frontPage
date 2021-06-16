@@ -517,15 +517,6 @@ const Checkbox = ({ label, name, checked, onChangeFunction }) =>
   </div>
 );
 
-const Spinner = () => {
-  <motion.div
-  animate={{
-    scale:[1,2,2,1,1],
-    rotate: [0,0,270,270,0],
-  }}
-  />
-}
-
 const StoryCheckbox = ({ label, name, checked, onChangeFunction }) =>
 (
   <div>

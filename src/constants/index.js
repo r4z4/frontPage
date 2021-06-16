@@ -3,7 +3,6 @@
 // Constants Index.js
 
 import React, { Component } from "react";
-import { motion } from "framer-motion";
 import './index.css';
 
 const templates = ['Newspaper', 'Telegram', 'Magazine', 'Company'];

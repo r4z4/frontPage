@@ -541,7 +541,6 @@ export {
   FrontPageHTML, 
   FrontPageOldSchool,
   FrontPageCompany,
-  Spinner,
   templates,
   autoNewspaperName,
   autoCity,

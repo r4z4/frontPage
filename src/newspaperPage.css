@@ -59,7 +59,7 @@ header{
     font-weight: 900;
     font-size: 80px;
     text-transform: uppercase;
-    display: inline-block;
+    display: block;
     height: 100%;
 	margin-top: 15px;
     margin-bottom: 10px;
@@ -145,6 +145,7 @@ p{
     line-height: normal;
     font-family: 'Playfair Display', serif;
     display: block;
+	word-break: break-all;
     margin: 0 auto;
 
 
@@ -155,6 +156,7 @@ p{
     text-transform: uppercase;
     padding: 10px 0 10px 0;
 	display: inline-block;
+	word-break: break-all;
 	line-height: normal;
 }
 /* h11 = Story Two Headline */

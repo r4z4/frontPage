@@ -135,7 +135,7 @@ select {
 }
 
 .imageInputs {
-    	column-count: 2;
+    	column-count: 3;
 	height: auto;
 	padding-top: 0;
 	margin-bottom: 0;
@@ -157,27 +157,31 @@ select {
 .imageRight	{
 	float: right;
 	text-align: right;
+	display: block;
 }
 .imageRight label	{
 	margin-right: 20px;
 }
 .imageRight input[type=checkbox]	{
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .orientation	{
-	text-align: left;	
+	display: flex;	
 	color: teal;
+	position: relative;
 }
 .imgButton	{
 	color: red;
 	border: 2px solid blue;
 }
 .imagePreview	{
-	float: right;
-	display: inline;
+	margin-top: 50px;
+	display: block;
+	position: relative;
 	height: 200px;
 	width: 200px;
-	margin-left: 75px;
+	//border-radius: 4em;
+	//border: 1px  solid black;
 }
 .colorInputs	{
 	position: relative;
@@ -258,6 +262,7 @@ textarea {
 }
 .generated	{
 	display: flex;
+	padding-left: 75px;
 }
 #frontPageDiv	{
 	width: 1300px;

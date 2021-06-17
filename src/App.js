@@ -75,6 +75,7 @@ class App extends Component {
     this.clearImage = this.clearImage.bind(this);
     this.spin = this.spin.bind(this);
     this.generate = this.generate.bind(this);
+    this.applyTemplate = this.applyTemplate.bind(this);
     this.portal = this.portal.bind(this);
     this.download = this.download.bind(this);
     this.onDrop = this.onDrop.bind(this);
@@ -98,10 +99,11 @@ toImage(){
     img.src = dataURL;
     console.log(dataURL)
   })
-  .then (result => this.setState({"image": img.src}))
+  .then (result => this.setState({"image": img.src}), () => {this.setState({errorMessage: ""})})
     //document.appendChild(img);
   .catch(function (error) {
-    console.error("oops", error);
+    console.error("domtoimage error", error);
+    this.setState({ errorMessage: "Image must be present to generate image of frontPage -- Sorry (Working on it)"})
   })
 }
 
@@ -158,17 +160,8 @@ rotate(){
     this.setState ({selectedFile: null})
   }
 
-  generate() {
-    if ( this.state.newspaperName !== ''  && this.state.mainHeadline !== ''
-      && this.state.HeadlineTwo !== ''
-    && this.state.errorNewspaperName === "" && this.state.errorMainHeadline === "" 
-    && this.state.errorYear === "" && this.state.errorMonth === "" && this.state.errorDay === ""
-    && this.state.errorHeadlineTwo === "" && this.state.errorMainStory === ""
-    && this.state.errorMainSubHeading === "" && this.state.errorAuthor === ""
-    && this.state.errorStoryTwo === "" && this.state.errorCity === "" && this.state.errorState === "") {
-      
-      console.log('generate registers');
-      if (this.state.template === "Newspaper") {
+  applyTemplate() {
+    if (this.state.template === "Newspaper") {
       let frontPageHTML =
       <consts.FrontPageHTML id="frontPage"
       newspaperName = { this.state.newspaperName }
@@ -195,68 +188,84 @@ rotate(){
     />
       this.setState({
       result: frontPageHTML
-    });
-  } if (this.state.template === "Telegram") {
-    let frontPageOldSchool =
-    <consts.FrontPageOldSchool
-    newspaperName = { this.state.newspaperName }
-    city = { this.state.city }
-    state = { this.state.state }
-    month = { this.state.month }
-    day = { this.state.day }
-    year = { this.state.year }
-    mainHeadline = { this.state.mainHeadline }
-    mainSubHeading = { this.state.mainSubHeading }
-    mainStory = {this.state.mainStory }
-    headlineTwo = { this.state.headlineTwo }
-    author = { this.state.author }
-    storyTwo = { this.state.storyTwo }
-    fontHeadline = { this.state.fontHeadline }
-    fontHeader = { this.state.fontHeader }
-    fontBody = { this.state.fontBody }
-    picture = { this.state.selectedFile }
-    /*picture = { (this.state.selectedFile) ? this.state.selectedFile : this.state.genericImage }*/
-    imgFilter = { this.state.imgFilter }
-    imgH = { this.state.imgH }
-    imgW = { this.state.imgW }
-    imgCaption = { this.state.imgCaption }
-  />
-    this.setState({
-    result: frontPageOldSchool
-  });
+      });
+      } if (this.state.template === "Telegram") {
+      let frontPageOldSchool =
+      <consts.FrontPageOldSchool
+      newspaperName = { this.state.newspaperName }
+      city = { this.state.city }
+      state = { this.state.state }
+      month = { this.state.month }
+      day = { this.state.day }
+      year = { this.state.year }
+      mainHeadline = { this.state.mainHeadline }
+      mainSubHeading = { this.state.mainSubHeading }
+      mainStory = {this.state.mainStory }
+      headlineTwo = { this.state.headlineTwo }
+      author = { this.state.author }
+      storyTwo = { this.state.storyTwo }
+      fontHeadline = { this.state.fontHeadline }
+      fontHeader = { this.state.fontHeader }
+      fontBody = { this.state.fontBody }
+      picture = { this.state.selectedFile }
+      /*picture = { (this.state.selectedFile) ? this.state.selectedFile : this.state.genericImage }*/
+      imgFilter = { this.state.imgFilter }
+      imgH = { this.state.imgH }
+      imgW = { this.state.imgW }
+      imgCaption = { this.state.imgCaption }
+      />
+      this.setState({
+      result: frontPageOldSchool
+      });
+      } if (this.state.template === "Company") {
+      let frontPageCompany =
+      <consts.FrontPageCompany
+      newspaperName = { this.state.newspaperName }
+      city = { this.state.city }
+      state = { this.state.state }
+      month = { this.state.month }
+      day = { this.state.day }
+      year = { this.state.year }
+      mainHeadline = { this.state.mainHeadline }
+      mainSubHeading = { this.state.mainSubHeading }
+      mainStory = {this.state.mainStory }
+      headlineTwo = { this.state.headlineTwo }
+      author = { this.state.author }
+      storyTwo = { this.state.storyTwo }
+      fontHeadline = { this.state.fontHeadline }
+      fontHeader = { this.state.fontHeader }
+      fontBody = { this.state.fontBody }
+      picture = { this.state.selectedFile }
+      /*picture = { (this.state.selectedFile) ? this.state.selectedFile : this.state.genericImage }*/
+      imgFilter = { this.state.imgFilter }
+      imgH = { this.state.imgH }
+      imgW = { this.state.imgW }
+      imgCaption = { this.state.imgCaption }
+      />
+      this.setState({
+      result: frontPageCompany
+      });
+      } else {
+      };
   }
-  } if (this.state.template === "Company") {
-    let frontPageCompany =
-    <consts.FrontPageCompany
-    newspaperName = { this.state.newspaperName }
-    city = { this.state.city }
-    state = { this.state.state }
-    month = { this.state.month }
-    day = { this.state.day }
-    year = { this.state.year }
-    mainHeadline = { this.state.mainHeadline }
-    mainSubHeading = { this.state.mainSubHeading }
-    mainStory = {this.state.mainStory }
-    headlineTwo = { this.state.headlineTwo }
-    author = { this.state.author }
-    storyTwo = { this.state.storyTwo }
-    fontHeadline = { this.state.fontHeadline }
-    fontHeader = { this.state.fontHeader }
-    fontBody = { this.state.fontBody }
-    picture = { this.state.selectedFile }
-    /*picture = { (this.state.selectedFile) ? this.state.selectedFile : this.state.genericImage }*/
-    imgFilter = { this.state.imgFilter }
-    imgH = { this.state.imgH }
-    imgW = { this.state.imgW }
-    imgCaption = { this.state.imgCaption }
-  />
-    this.setState({
-    result: frontPageCompany
-  });
-  } else {
-    this.setState ({errorMessage: "Errors Exist. Check required fields."})
+
+  generate() {
+    if ( this.state.newspaperName !== ''  && this.state.mainHeadline !== ''
+    && this.state.HeadlineTwo !== ''
+    && this.state.errorNewspaperName === "" && this.state.errorMainHeadline === "" 
+    && this.state.errorYear === "" && this.state.errorMonth === "" && this.state.errorDay === ""
+    && this.state.errorHeadlineTwo === "" && this.state.errorMainStory === ""
+    && this.state.errorMainSubHeading === "" && this.state.errorAuthor === ""
+    && this.state.errorStoryTwo === "" && this.state.errorCity === "" && this.state.errorState === "") {
+      
+      console.log('generate registers');
+      this.setState ({errorMessage: ""})
+      this.applyTemplate();
+    } else {
+        this.setState ({errorMessage: "Errors Exist. Check required fields."})
   };
 }
+
 
   spin() {
     let className = "frontPageDivImageSpin";
@@ -516,8 +525,9 @@ rotate(){
     const { rotation } = this.state;
     return (
       <div className="App">
+        {/* 
         <div className="template_select">
-        <aside>
+          <aside>
             <consts.SelectBox
             options={consts.templates}
             className='templateSelectBox'
@@ -526,8 +536,9 @@ rotate(){
             stateVar={this.state.pageColor}
             onChangeFunction={ this.handleSelectboxChange }
             />  
-            </aside>
+          </aside>
         </div>
+        */}
         <div>
         <form className="input">
           <h1>Newspaper Front Page Generator</h1>
@@ -720,7 +731,7 @@ rotate(){
             <div className='imagePreview'>
             {(this.state.selectedFile) ? (
               <img src={this.state.selectedFile} style={{filter: this.state.imgFilter}} height='200px' width='200px' alt='' />
-              ) : (<p className="centered">Image Preview</p>)}
+              ) : (<p>Image Preview</p>)}
             </div>
           </div>
           <div className="imageRight">
@@ -739,14 +750,6 @@ rotate(){
             id="checkbox"
             name = "isGrayscale"
             onChangeFunction = { this.handleCheckboxChange }
-            err = { this.state.errorHeadline }
-          />
-          <consts.InputAndError
-            fullName = "Image Caption"
-            name = "imageCaption"
-            type = "text"
-            value = { this.state.imageCaption }
-            onChangeFunction = { this.handleInputChange }
             err = { this.state.errorHeadline }
           />
           </div>
@@ -805,11 +808,6 @@ rotate(){
           onClick={this.toImage}
           className='imageButton'
           value='Image'
-          />
-          <Button
-          onClick={this.portal}
-          className='portalButton'
-          value='Portal'
           />
           <Button
           onClick={this.download}

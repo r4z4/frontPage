@@ -4,6 +4,7 @@
 
 import React, { Component } from "react";
 import './index.css';
+import defImg from './images/default.png';
 
 const templates = ['Newspaper', 'Telegram', 'Magazine', 'Company'];
 const autoNewspaperName = 'The New York Times';
@@ -30,7 +31,7 @@ const autoImgCaption = 'Man goes to see if what they say is true';
 const fonts = ['Eagle Lake', 'Quintessential Regular', 'UF Cook', 'UF Maguntia', 'Chomsky', 'Cloister Black'];
 const bodyFonts = ['Courier', 'Helvetica', 'Times', 'Arial'];
 const pageColors = ['White', 'Grey', 'Lightgrey', 'Whitesmoke', '#FEF8C6'];
-const defaultImage = "blob:http://localhost:3000/92d29947-dd6d-45a0-a3a5-b302d1d0497f";
+const defaultImage = defImg;
 
 const SelectBox = ({className, label, name, options, stateVar, onChangeFunction}) => 
 (
